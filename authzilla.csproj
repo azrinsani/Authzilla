@@ -7,21 +7,25 @@
 
   <ItemGroup>
     <Compile Remove="authzilla.core\**" />
+    <Compile Remove="authzilla.mssql\**" />
     <Compile Remove="authzilla.postgresql\**" />
     <Compile Remove="authzilla.sqlite\**" />
     <Compile Remove="Quickstart\**" />
     <Compile Remove="Views\**" />
     <Content Remove="authzilla.core\**" />
+    <Content Remove="authzilla.mssql\**" />
     <Content Remove="authzilla.postgresql\**" />
     <Content Remove="authzilla.sqlite\**" />
     <Content Remove="Quickstart\**" />
     <Content Remove="Views\**" />
     <EmbeddedResource Remove="authzilla.core\**" />
+    <EmbeddedResource Remove="authzilla.mssql\**" />
     <EmbeddedResource Remove="authzilla.postgresql\**" />
     <EmbeddedResource Remove="authzilla.sqlite\**" />
     <EmbeddedResource Remove="Quickstart\**" />
     <EmbeddedResource Remove="Views\**" />
     <None Remove="authzilla.core\**" />
+    <None Remove="authzilla.mssql\**" />
     <None Remove="authzilla.postgresql\**" />
     <None Remove="authzilla.sqlite\**" />
     <None Remove="Quickstart\**" />
@@ -190,7 +194,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\azutil-core\_azutil-core.csproj" />
     <ProjectReference Include="authzilla.core\authzilla.core.csproj" />
+    <ProjectReference Include="authzilla.mssql\authzilla.mssql.csproj" />
     <ProjectReference Include="authzilla.postgresql\authzilla.postgresql.csproj" />
     <ProjectReference Include="authzilla.sqlite\authzilla.sqlite.csproj" />
   </ItemGroup>

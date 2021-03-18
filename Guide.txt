@@ -2,10 +2,12 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1) Create migration scripts by runnning in the Command Prompt (Or you can use the Developer Command Prompt in Visual Studio) 
-	- dotnet ef migrations add Initial -c AppDbContext -o Migrations\AppIdentityDb --project authzilla.postgresql -- --provider PostgreSQL
+	- dotnet ef migrations add Initial -c AppDbContext -o Migrations\AppDb --project authzilla.postgresql -- --provider PostgreSQL
 	- dotnet ef migrations add Initial -c PersistedGrantDbContext -o Migrations\PersistedGrantDb --project authzilla.postgresql -- --provider PostgreSQL
-	- dotnet ef migrations add Initial -c AppDbContext -o Migrations\AppIdentityDb --project authzilla.sqlite -- --provider SQLite
+	- dotnet ef migrations add Initial -c AppDbContext -o Migrations\AppDb --project authzilla.sqlite -- --provider SQLite
 	- dotnet ef migrations add Initial -c PersistedGrantDbContext -o Migrations\PersistedGrantDb --project authzilla.sqlite -- --provider SQLite
+	- dotnet ef migrations add Initial -c AppDbContext -o Migrations\AppDb --project authzilla.mssql -- --provider MSSQL
+	- dotnet ef migrations add Initial -c PersistedGrantDbContext -o Migrations\PersistedGrantDb --project authzilla.mssql -- --provider MSSQL
 	Notes:
 		- You can also run 'CreateInitialMigrations.bat'
 		- 'Initial' is just a generic name for reference purpose. IT MUST BE UNIQUE. This is ultimately used to identify which migration is gonna take place.
