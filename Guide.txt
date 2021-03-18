@@ -1,0 +1,56 @@
+﻿AZUTIL AUTH SERVER GUIDE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1) Create migration scripts by runnning in the Command Prompt (Or you can use the Developer Command Prompt in Visual Studio) 
+	- dotnet ef migrations add Initial -c AppDbContext -o Migrations\AppIdentityDb --project authzilla.postgresql -- --provider PostgreSQL
+	- dotnet ef migrations add Initial -c PersistedGrantDbContext -o Migrations\PersistedGrantDb --project authzilla.postgresql -- --provider PostgreSQL
+	- dotnet ef migrations add Initial -c AppDbContext -o Migrations\AppIdentityDb --project authzilla.sqlite -- --provider SQLite
+	- dotnet ef migrations add Initial -c PersistedGrantDbContext -o Migrations\PersistedGrantDb --project authzilla.sqlite -- --provider SQLite
+	Notes:
+		- You can also run 'CreateInitialMigrations.bat'
+		- 'Initial' is just a generic name for reference purpose. IT MUST BE UNIQUE. This is ultimately used to identify which migration is gonna take place.
+		- 'PersistedGrantDBContext' is the exact DBContext class name in the IS4 Library: 
+		- '-o' specified the Output Folder.
+		- The command will create a 'Migrations' Folder in the authzilla.[provider] library projects
+
+2) Create/Migrate the Database
+	- dotnet ef database update --context AppDbContext -- --provider SQLite
+	- dotnet ef database update --context PersistedGrantDbContext -- --provider SQLite
+	- dotnet ef database update --context AppDbContext -- --provider PostgreSQL
+	- dotnet ef database update --context PersistedGrantDbContext -- --provider PostgreSQL
+	Notes:
+		- This command somehow runs the programs 'Startup.cs => ConfigureServices()' file to grab the connection strings and other stuff.
+		- Make sure the Connection Sring is updated in the appsettings.development.json.
+		- It will connect to the Live Database and create the Databases accordingly.
+
+	====== OR ===========
+
+	If a Database is already running, run the following command to generate SQL Scripts. This is best for PRODUCTION.
+	- dotnet ef migrations script --context PersistedGrantDbContext --output PersistedGrantDb_Migrate.sql
+	- dotnet ef migrations script --context AppIdentityDbContext --output AppIdentityDb_Migrate.sql
+
+	====== OR ===========
+	
+	Migrate the database in the program itself. Program just have to restart. Add the following at program.cs after build services.
+		var host = CreateHostBuilder(args).Build();
+		using var scope = host.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
+        scope.ServiceProvider.GetService<PersistedGrantDbContext>().Database.Migrate();
+        scope.ServiceProvider.GetService<AppIdentityDbContext>().Database.Migrate();
+
+3) Once Database is Created, launch the program and see if Identity Server exists by browsing to
+	- https://localhost:11311/.well-known/openid-configuration
+
+	See if you can also get a token from the server via postman:
+	POST /connect/token
+	Headers: Content-Type: application/x-www-form-urlencoded
+	Body: grant_type=client_credentials&scope=m2mapi&client_id=m2m&client_secret=MyPasswordNotHashed
+
+
+4)
+
+
+
+chrome://flags/#allow-insecure-localhost
+
+
+Install Cert GUide: https://medium.com/@rubenvermeulen/running-angular-cli-over-https-with-a-trusted-certificate-4a0d5f92747a

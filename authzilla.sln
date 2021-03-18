@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "authzilla", "authzilla.csproj", "{183FFDEC-C0A9-44C1-A3A6-0797B79E5E92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{08E4ADA2-3259-4CFA-B71D-9A9BDBEB1B84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "authzilla.sqlite", "authzilla.sqlite\authzilla.sqlite.csproj", "{A3D477DF-9313-431B-A719-5055AEDA5294}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "authzilla.core", "authzilla.core\authzilla.core.csproj", "{0C5E0538-5F6B-4E0A-9A16-8E67C25180E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "authzilla.postgresql", "authzilla.postgresql\authzilla.postgresql.csproj", "{53BF65D8-8304-4660-892C-E824E16FABB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{183FFDEC-C0A9-44C1-A3A6-0797B79E5E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{183FFDEC-C0A9-44C1-A3A6-0797B79E5E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{183FFDEC-C0A9-44C1-A3A6-0797B79E5E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{183FFDEC-C0A9-44C1-A3A6-0797B79E5E92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D477DF-9313-431B-A719-5055AEDA5294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D477DF-9313-431B-A719-5055AEDA5294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D477DF-9313-431B-A719-5055AEDA5294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D477DF-9313-431B-A719-5055AEDA5294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C5E0538-5F6B-4E0A-9A16-8E67C25180E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C5E0538-5F6B-4E0A-9A16-8E67C25180E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C5E0538-5F6B-4E0A-9A16-8E67C25180E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C5E0538-5F6B-4E0A-9A16-8E67C25180E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53BF65D8-8304-4660-892C-E824E16FABB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53BF65D8-8304-4660-892C-E824E16FABB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53BF65D8-8304-4660-892C-E824E16FABB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53BF65D8-8304-4660-892C-E824E16FABB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A3D477DF-9313-431B-A719-5055AEDA5294} = {08E4ADA2-3259-4CFA-B71D-9A9BDBEB1B84}
+		{0C5E0538-5F6B-4E0A-9A16-8E67C25180E2} = {08E4ADA2-3259-4CFA-B71D-9A9BDBEB1B84}
+		{53BF65D8-8304-4660-892C-E824E16FABB3} = {08E4ADA2-3259-4CFA-B71D-9A9BDBEB1B84}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0ADE0938-A66C-4BBE-BBD6-21B019E4855A}
+	EndGlobalSection
+EndGlobal

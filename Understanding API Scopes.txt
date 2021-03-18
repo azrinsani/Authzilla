@@ -1,0 +1,11 @@
+﻿When adding Identity Server Service, we call:
+    - AddInMemoryIdentityResources(Config.IdentityResources)
+    - AddInMemoryApiScopes(Config.ApiScopes)
+    - AddInMemoryApiResources(Config.GetApiResources())
+    - AddInMemoryClients(Config.Clients)
+
+Identity Resources
+    - Are the stuff that will be included in the ID-token. This can be
+ 
+ APIScopes
+    - Is what you ask for as a client and as a user you give consent to
