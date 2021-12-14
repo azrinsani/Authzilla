@@ -18,7 +18,7 @@ is free for 50,000 Users and so is
 [Microsoft Azure Active Directory External Identities](https://azure.microsoft.com/en-au/services/active-directory/external-identities), 
 it is [free for 50,000 Users](https://azure.microsoft.com/en-us/pricing/details/active-directory/external-identities/) as well. 
 
-The thing is, these cloud solutions only provide user 1 out of the 5 [OAuth 2.0 Grant types](https://oauth.net/2/grant-types/), 
+The thing is, these cloud solutions only provide 1 out of the 5 [OAuth 2.0 Grant types](https://oauth.net/2/grant-types/), 
 i.e. they only provide the [Authorization Code/PKCE Flow](https://auth0.com/docs/authorization/flows/authorization-code-flow).
 If one requires server-to-server authentication, typical for Microservices, the [Client Credentials Flow](https://auth0.com/docs/authorization/flows/client-credentials-flow)
 is necessary. Firebase Authentication does not provide this. 
