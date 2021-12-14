@@ -13,10 +13,11 @@ simple installable service.
 
 ## Do we still need Authzilla or Identity Server anyway?
 Some people say Identity Server, Authzilla, or anything similar is no longer necessary since there are so many cloud solutions out there.
-For example, Firebase Authentication is 100% Free,
+For example, [Firebase Authentication](https://firebase.google.com/docs/auth) is 100% Free,
 and AWS Cognito is free for 50,000 Monthly Active Users. Those thay claim so have no idea what they are talking about.
+
 The thing is, these cloud solutions only provide user 1 out of the 5 [OAuth 2.0 Grant types](https://oauth.net/2/grant-types/), 
-which is the [Authorization Code/PKCE Flow](https://auth0.com/docs/authorization/flows/authorization-code-flow).
+i.e. they only provide the [Authorization Code/PKCE Flow](https://auth0.com/docs/authorization/flows/authorization-code-flow).
 If one requires server-to-server authentication, typical for Microservices, the [Client Credentials Flow](https://auth0.com/docs/authorization/flows/client-credentials-flow)
 is necessary. Firebase Authentication does not provide this. 
 
