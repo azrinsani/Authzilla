@@ -7,7 +7,7 @@ Installation is expected to be a breeze, like how one installs any Commercial Se
 ## Why Authzilla?
 Identity Server is complicated. I have a theory that it was purposely made that way so support/consultancy work can be sold to corporate customers.
 People need to make a living right?
-But not everyone is corporate rich. Authzilla aims to solve the pain of setting up Identity Server from cheapskates like myself, by wrapping it around an 
+But not everyone is corporate rich. Authzilla aims to solve the pain of setting up Identity Servers, by wrapping it around an 
 simple installable service.
 
 
