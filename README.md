@@ -2,7 +2,7 @@
 
 Authzilla is a MicroService (Server) which wraps around [Identity Server 4](https://identityserver4.readthedocs.io/) 
 transforming it into a much simpler out-of-the-box solution. 
-Installation is expected to be a breeze, like how one installs any Commercial Service App.
+Installation and setup is expected to be a breeze, like how one installs any Commercial Service App.
 
 ## Why Authzilla?
 Identity Server is complicated. I have a theory that it was purposely made that way so support/consultancy work can be sold to corporate customers.
