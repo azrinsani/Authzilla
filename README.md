@@ -13,8 +13,10 @@ simple installable service.
 
 ## Do we still need Authzilla or Identity Server anyway?
 Some people say Identity Server, Authzilla, or anything similar is no longer necessary since there are so many cloud solutions out there.
-For example, [Firebase Authentication](https://firebase.google.com/docs/auth) is 100% Free,
-and AWS Cognito is free for 50,000 Monthly Active Users. Those thay claim so have no idea what they are talking about.
+For example, [Firebase Authentication](https://firebase.google.com/docs/auth) is 100% Free, [AWS Cognito](https://aws.amazon.com/cognito/) 
+is free for 50,000 Users and so is
+[Microsoft Azure Active Directory External Identities](https://azure.microsoft.com/en-au/services/active-directory/external-identities), 
+it is [free for 50,000 Users](https://azure.microsoft.com/en-us/pricing/details/active-directory/external-identities/) as well. 
 
 The thing is, these cloud solutions only provide user 1 out of the 5 [OAuth 2.0 Grant types](https://oauth.net/2/grant-types/), 
 i.e. they only provide the [Authorization Code/PKCE Flow](https://auth0.com/docs/authorization/flows/authorization-code-flow).
